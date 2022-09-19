@@ -1,0 +1,253 @@
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px){
+    header  {
+      height: 100px;
+    }
+  
+    h1.logoelement {
+      font-size: 2.3em;
+    }
+  
+  h2.logoelement {
+    font-size: .5em;
+  }
+  header{
+    padding: .5em
+  }
+  
+  .icon {
+    top: 20px;
+  right: 40px;
+  }
+  
+  
+  .kimonovideo {
+    margin: 0;
+    height: auto;
+  } 
+  
+  
+  section p:first-child{
+    margin: 30px 30px -80px 30px ;
+    font-size: .8em;
+    /* margin: 3em; */
+    padding: 0;
+  }
+  
+   ul {
+    list-style-type: none;
+    padding: 30px 10px;
+    }
+}
+  
+  
+  @media (max-width: 925px) {
+  
+    h1.logoelement {
+      font-size: 2em;
+    }
+  
+  
+    h2.logoelement{font-size: 5px;
+      display: flex;
+    justify-content: flex-start;
+  
+    }
+  
+    #albuminfo article {
+      align-content: center;
+  
+      width: 95vw;
+    }
+  
+    nav ul {
+     font-size: 1.3em;
+     /* padding-top: 120px;
+     padding-right: 10px; */
+   }
+  
+   nav.active .icon {
+    margin: -6px -5px;
+  }
+    .icon {
+      top: 20px;
+    right: 20px;
+    }
+  
+    .icon .line {
+      width: 35px;
+    }
+  
+    .responsive {
+      width: 85vw;
+      margin: 1em .5em 2em .5em;
+    }
+  
+  .kimonovideo {
+    background-image: none;
+    margin: -30px 0 0 0;
+    scale: 110%;
+  }
+  
+  
+  main #videopage {
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    align-content: space-between;
+    }
+  
+  #photos img {
+  width: 90vw;
+  height: auto;
+  }
+  
+  
+  #albuminfo {
+    display: flex;
+    flex-direction: column;
+  flex-wrap: wrap;
+    align-content: center;
+    justify-content:space-around;
+   
+  }
+  #albuminfo article{
+    width: 100vw;
+  }
+  #albuminfo  ol{
+    border-top:  2px solid purple;
+    border-bottom: 2px solid white;
+  margin: auto;
+  }
+  
+  #albuminfo ul {
+  margin: auto;
+  padding-bottom: 4em;
+  }
+  
+  /* secton for album page */
+  
+  .albums {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+  }
+  .panel {
+    width: 80vw;
+    background-color: black;
+    border: 1px solid rgba(63, 63, 63, 0.2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 30px;
+    /* color: white; */
+    cursor: pointer;
+  
+    margin: 5px;
+    position: relative;
+    opacity: .4;
+    transition: flex .4s ease-in, opacity .6s ease-in;;
+  }
+  
+  
+  .albums li {
+    margin-bottom: 10px;
+  }
+  
+  
+  .albums ul {
+    color: rgb(255, 255, 255);  list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 72%;
+    position: absolute;
+    border-radius: 0 35px 35px 0 ;
+    bottom: 1em;
+    opacity: 0;
+    font-size: .9em;
+    padding: 15px;
+    transition: opacity .5s ease-in-out;
+  
+  } 
+  
+  .panel.active {
+    justify-items: center;
+    height: 80%;
+    width: 80%;
+    flex: 6;
+    opacity: 1;
+  }
+  
+  .panel.active ul:hover {
+    opacity: 1;
+    list-style-type: none;
+    }
+  }
+  
+  
+  @media (max-width: 580px) {
+  header {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1;
+    height: 70px;
+  }
+  
+  nav.active, nav  {
+    /* transition: transform 2s linear, background-color 4s ease-out; */
+    width: 100vw;
+    height: 100vh;
+  
+    margin: auto;
+    padding: 0;
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav.active {
+    
+    position: absolute;
+      background-color: rgba(255, 255, 255, 0.9) ;
+    }
+  
+  nav.active .icon {
+    margin: -5px 24px;
+    position: absolute;
+    }
+  
+  nav .icon {
+    margin: -7px -9px ;
+  }
+  
+  nav.active ul, nav ul {
+  
+    width: 100vw;
+    height: 70vh;
+    font-size: 1.3em;
+    align-items: center;
+  }
+  nav ul li {
+    border-radius: 6px;
+    margin-top: 10px;
+    }
+  
+  .panel.active {
+    justify-items: center;
+    height: 80%;
+    width: 80%;
+    flex: 4;
+    opacity: 1;
+    border-radius: 10px;
+    }
+  }
+  
+  
