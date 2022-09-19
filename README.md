@@ -8,5 +8,3 @@ This is my simple vanilla website created as an initial project to implement rec
     -video thumbnails - make previously activated vids revert to thumbs
     -sticky active menu
     -when menu active, click on other part of page makes menu inactive 
-
-Next step to add to webhost
