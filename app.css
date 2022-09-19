@@ -24,7 +24,6 @@
 }  */
 
  nav ul {
-  
   display: flex;
   cursor: pointer;
   text-align: end;
@@ -89,8 +88,6 @@ nav.active ul li {
   opacity: 1;
   transform: translateX(0px);
 }
-
-
 
 /* HoverState */
 
