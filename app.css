@@ -46,7 +46,6 @@ nav.active ul{
 opacity: 1;
 }
 
-
 nav ul li {
   margin-top: 45px;
   background-color: rgba(254, 0, 0, 0.9);
@@ -57,7 +56,6 @@ nav ul li {
   transition: background-color .3s ease-in-out, transform .3s ease-out;
 }
 
-
 nav ul a {
   color: white;
   position: relative;
@@ -67,7 +65,6 @@ nav ul a {
   font-size: 1.2em;
   width: 100%;
   transition: color .3s ease-in-out;
-
 }
  
 nav ul li:nth-child(1) {
