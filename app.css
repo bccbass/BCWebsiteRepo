@@ -1,7 +1,6 @@
 
  /* Check BASS HJTML For weird nav wrappers */ 
  nav {
-  z-index: 99;
   width:  300px;
   height: 570px;
   display: flex ;
@@ -14,14 +13,9 @@
   margin-top: 15px;
 }
 
-/* nav.active { 
-
-  box-shadow: -3px 2px 2px rgba(0, 0, 0, 0.454);
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
-  background-color: rgba(255, 255, 255, 0.9);
-}  */
+nav.active { 
+  z-index: 1;
+}  
 
  nav ul {
   display: flex;
@@ -34,7 +28,7 @@
   height: 85%;
   margin-top: 10px ;
   padding-top: 4em;
-  padding-right: 2em;
+  padding-right: 3em;
   opacity: 0;
   justify-content: space-around;
   align-items: flex-end;
@@ -47,6 +41,7 @@ opacity: 1;
 
 nav ul li {
   margin-top: 45px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.317);
   background-color: rgba(254, 0, 0, 0.9);
   border-radius: 12px;
   line-height: 2.1em;
@@ -99,6 +94,7 @@ background-color: rgb(249, 3, 3);
 /* Icon Elements */
 
 .icon {
+  z-index: 1;
   background-color: rgba(255, 255, 255, 0);
   border: 0;
   cursor: pointer;
@@ -421,6 +417,7 @@ margin: auto;
 }
 
 .albums {
+  z-index: -99;
   padding: 50px;
   display: flex;
   width: 90vw;

@@ -11,6 +11,7 @@
   
   h2.logoelement {
     font-size: .5em;
+  
   }
   header{
     padding: .5em
@@ -44,15 +45,16 @@
   
   @media (max-width: 925px) {
   
+header {
+  height: 90px;
+}
+
     h1.logoelement {
       font-size: 2em;
     }
   
   
-    h2.logoelement{font-size: 5px;
-      display: flex;
-    justify-content: flex-start;
-  
+    h2.logoelement{font-size: 7px;
     }
   
     #albuminfo article {
@@ -68,15 +70,16 @@
    }
   
    nav.active .icon {
-    margin: -6px -5px;
+    margin: -6px 0px;
   }
     .icon {
-      top: 20px;
-    right: 20px;
+      top: 10px;
+    right: 15px;
     }
   
     .icon .line {
-      width: 35px;
+      width: 32px;
+      height: 1px;
     }
   
     .responsive {
@@ -205,12 +208,10 @@
     /* transition: transform 2s linear, background-color 4s ease-out; */
     width: 100vw;
     height: 100vh;
-  
     margin: auto;
     padding: 0;
     align-content: center;
     display: flex;
-    justify-content: space-around;
   }
   
   nav.active {
@@ -220,20 +221,22 @@
     }
   
   nav.active .icon {
-    margin: -5px 24px;
+    margin: 3px 18px;
     position: absolute;
     }
   
   nav .icon {
-    margin: -7px -9px ;
+    margin: 0px -6px ;
   }
   
   nav.active ul, nav ul {
-  
+    margin-right: -50px;
     width: 100vw;
     height: 70vh;
     font-size: 1.3em;
     align-items: center;
+    align-content: center; 
+    margin-top: -70px; 
   }
   nav ul li {
     border-radius: 6px;
