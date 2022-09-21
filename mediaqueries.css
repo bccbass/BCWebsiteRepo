@@ -13,15 +13,6 @@
     font-size: .5em;
   
   }
-  header{
-    padding: .5em
-  }
-  
-  .icon {
-    top: 20px;
-  right: 40px;
-  }
-  
   
   .kimonovideo {
     margin: 0;
@@ -30,9 +21,8 @@
   
   
   section p:first-child{
-    margin: 30px 30px -80px 30px ;
+    margin: 30px 30px -60px 30px ;
     font-size: .8em;
-    /* margin: 3em; */
     padding: 0;
   }
   
@@ -57,31 +47,11 @@ header {
     h2.logoelement{font-size: 7px;
     }
   
-    #albuminfo article {
-      align-content: center;
-  
-      width: 95vw;
-    }
-  
     nav ul {
      font-size: 1.3em;
-     /* padding-top: 120px;
-     padding-right: 10px; */
    }
   
-   nav.active .icon {
-    margin: -6px 0px;
-  }
-    .icon {
-      top: 10px;
-    right: 15px;
-    }
-  
-    .icon .line {
-      width: 32px;
-      height: 1px;
-    }
-  
+
     .responsive {
       width: 85vw;
       margin: 1em .5em 2em .5em;
@@ -93,7 +63,10 @@ header {
     scale: 110%;
   }
   
-  
+  section p:first-child{
+    margin-bottom: -80px;
+  }
+
   main #videopage {
     flex-direction: column;
     padding: 0;
@@ -106,33 +79,9 @@ header {
   height: auto;
   }
   
-  
-  #albuminfo {
-    display: flex;
-    flex-direction: column;
-  flex-wrap: wrap;
-    align-content: center;
-    justify-content:space-around;
-   
-  }
-  #albuminfo article{
-    width: 100vw;
-  }
-  #albuminfo  ol{
-    border-top:  2px solid purple;
-    border-bottom: 2px solid white;
-  margin: auto;
-  }
-  
-  #albuminfo ul {
-  margin: auto;
-  padding-bottom: 4em;
-  }
-  
-  /* secton for album page */
-  
   .albums {
     margin: 0;
+    margin-top: 15px;
     padding: 0;
     display: flex;
     width: 100vw;
@@ -204,29 +153,51 @@ header {
     height: 70px;
   }
   
+  h1.logoelement {
+    font-size: 1.85em;
+  }
+  
   nav.active, nav  {
-    /* transition: transform 2s linear, background-color 4s ease-out; */
-    width: 100vw;
-    height: 100vh;
     margin: auto;
     padding: 0;
     align-content: center;
     display: flex;
   }
-  
-  nav.active {
+
+
+  #mobilenav.active {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9) ;
+    }
+
     
-    position: absolute;
-      background-color: rgba(255, 255, 255, 0.9) ;
-    }
-  
+ #mobilenav {
+  justify-items: center;
+  margin-top: -5px;
+  margin-right: -55px;
+  height: 100vh;
+  width: 100px;
+  transition: width 0s;
+}
+
+
+
+  .icon .line {
+    height: 1px;
+    width: 24px;
+  }
+
+  .icon .line2 {
+    bottom: 25px;
+  }
+  .icon .line3 {
+    bottom: 19px;
+  }
+
   nav.active .icon {
-    margin: 3px 18px;
-    position: absolute;
-    }
-  
-  nav .icon {
-    margin: 0px -6px ;
+    margin: -4px -40px ;
   }
   
   nav.active ul, nav ul {
@@ -238,11 +209,28 @@ header {
     align-content: center; 
     margin-top: -70px; 
   }
+  
+
   nav ul li {
     border-radius: 6px;
     margin-top: 10px;
     }
-  
+
+    nav.active .icon .line1 {
+      width: 30px;
+      transform: rotate(-135deg) translateX(-12px) translateY(-2px);
+    }
+    
+    nav.active .icon .line2 {
+      width: 30px;
+      transform: rotate(135deg) translateX(-3px) translateY(-8px);
+    }
+
+
+  .panel ul {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
   .panel.active {
     justify-items: center;
     height: 80%;
