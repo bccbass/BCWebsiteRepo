@@ -57,6 +57,10 @@ header {
     h2.logoelement{font-size: 7px;
     }
   
+nav ul {
+  padding-right: 2em;
+}
+
     #albuminfo article {
       align-content: center;
   
@@ -79,7 +83,6 @@ header {
   
     .icon .line {
       width: 32px;
-      height: 1px;
     }
   
     .responsive {
@@ -202,6 +205,10 @@ header {
     bottom: 0px;
     z-index: 1;
     height: 70px;
+  }
+
+  .icon .line {
+    height: 1px;
   }
   
   nav.active, nav  {
