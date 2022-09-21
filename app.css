@@ -9,7 +9,7 @@
   justify-content: flex-end;
   position: sticky; 
   top: 0;
-  margin: 15px -20px;
+  margin: 15px 0;
   overflow: hidden;
   transition: width .4s linear;
 }
@@ -168,8 +168,9 @@ body {
   font-family: 'Source Code Pro', monospace;
   font-weight: 200;
   margin: 0;
-  margin: auto;
+  /* margin: auto; */
   padding: 0;
+  /* width: 100vw; */
 }
 
 .background-video {
