@@ -295,17 +295,21 @@ align-content: center;
     width: 100%;
   }
 
-/* Is the layout still funny on kimono page? esp mobile? Perhaps this is the route to fix */
 
-  #kimonodescription,  section.kimonovideo{
+  #kimonodescription {
+    padding: 15px;
     width: 90vw;
     margin: auto;
+    margin-top: .5em;
+    margin-bottom: -1em;
   }
 
-section p:first-child{
-  margin: 50px 100px -60px 100px;
-  width: 90vw;
-}
+  section.kimonovideo{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+  }
+
 
 article {
   align-content: center;

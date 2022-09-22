@@ -19,11 +19,8 @@
     height: auto;
   } 
   
-  
   section p:first-child{
-    margin: 30px 30px -60px 30px ;
     font-size: .8em;
-    padding: 0;
   }
   
    ul {
@@ -58,13 +55,8 @@ nav ul {
   
 .kimonovideo {
     background-image: none;
-    margin: -30px 0 0 0;
-    scale: 110%;
   }
-  
-  section p:first-child{
-    margin-bottom: -80px;
-  }
+
 
   main #videopage {
     flex-direction: column;
@@ -239,14 +231,16 @@ nav ul {
       transform: rotate(135deg) translateX(-3px) translateY(-8px);
     }
 
-    section p:first-child {
+    .kimonovideo {
+      /* margin-top: auto; */
+      width: 90vw;
       margin: auto;
-      margin-bottom: 0px;
+      padding: 0px;
+      justify-content: center;
     }
 
-    .kimonovideo {
-      margin-top: autoo;
-      padding: 0px;
+    .kimonovideo .vidcontainer .responsive {
+      width: 100vw;
     }
 
   .panel ul {
