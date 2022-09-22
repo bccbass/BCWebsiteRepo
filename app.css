@@ -1,20 +1,22 @@
 
  /* Check BASS HJTML For weird nav wrappers */ 
  nav {
-  width:  300px;
-  height: 570px;
+  width:  120px;
+  height: 560px;
   display: flex ;
   align-items: center;
   border-radius: 7px;
   justify-content: flex-end;
   position: sticky; 
   top: 0;
+  margin: 15px 0;
   overflow: hidden;
-  margin-top: 15px;
 }
 
 nav.active { 
   z-index: 1;
+  width:  300px;
+  height: 570px;
 }  
 
  nav ul {
@@ -26,7 +28,6 @@ nav.active {
   flex-direction: column;
   width: 300px;
   height: 85%;
-  margin-top: 10px ;
   padding-top: 4em;
   padding-right: 3em;
   opacity: 0;
@@ -166,8 +167,10 @@ body {
   font-family: 'Source Code Pro', monospace;
   font-weight: 200;
   margin: 0;
-  margin: auto;
+  /* margin: auto; */
   padding: 0;
+  /* width: 100vw; */
+  height: 100vh;
 }
 
 .background-video {
@@ -186,6 +189,8 @@ body {
     left: 0;
     right: 0;
     z-index: -1;
+
+
   }
 
  header {
@@ -290,12 +295,17 @@ align-content: center;
     width: 100%;
   }
 
+/* Is the layout still funny on kimono page? esp mobile? Perhaps this is the route to fix */
+
+  #kimonodescription,  section.kimonovideo{
+    width: 90vw;
+    margin: auto;
+  }
 
 section p:first-child{
   margin: 50px 100px -60px 100px;
   width: 90vw;
 }
-
 
 article {
   align-content: center;
@@ -303,37 +313,35 @@ article {
   margin: 0;
 }
 
-
 #albuminfo {
   display: flex;
-  flex-direction: column;
-flex-wrap: wrap;
-  align-content: center;
+  flex-direction: column; 
+  flex-wrap: wrap;
   font-size: 1.2em;
   line-height: 1.8em;
-  margin: 0;
+  margin: auto;
   width: 100vw;
 }
 
 #albuminfo  ol{
+  line-height: 3em;
   color: white;
   background-color: rgba(254, 0, 0, 0.8);
   width: auto;
-  padding: 20px 20px 20px 70px;
+  padding: 35px 20px 35px 70px;
   border-top:  2px solid rgba(145, 24, 24, 0.598);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.249);
-margin: 0;
+  border-bottom: 2px solid rgba(255, 58, 58, 0.52);
+  margin: 0;
 }
 
  
 #albuminfo ul {
-color: white;
-background-color: #e95c43ec;
-padding: 20px 20px 90px 20px;
-margin: auto;
-list-style-type: none;
-width: 100vw;
-height: auto;
+  color: white;
+  background-color: #e95c43ec;
+  padding: 35px 35px 90px 20px;
+  list-style-type: none;
+  width: auto;
+  margin: 0;
 }
 
 
@@ -342,7 +350,7 @@ height: auto;
  display: flex;
  flex-wrap: wrap;
  justify-content: center;
-margin: auto;
+  margin: auto;
 }
 
 
