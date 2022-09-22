@@ -167,21 +167,19 @@ body {
   font-family: 'Source Code Pro', monospace;
   font-weight: 200;
   margin: 0;
-  /* margin: auto; */
   padding: 0;
-  /* width: 100vw; */
   height: 100vh;
 }
 
 .background-video {
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   z-index: -1;
-
 }
 
  #background-video{
-   position: absolute;
+   position: fixed;
    margin: 0;
     width: 100vw;
     height: 100vh;
@@ -189,8 +187,8 @@ body {
     left: 0;
     right: 0;
     z-index: -1;
-
-
+    top: 0;
+    bottom: 125px;
   }
 
  header {
@@ -199,7 +197,6 @@ body {
   height: 125px;
   padding: 0;
   display: flex;
-    /* align-items: baseline; */
   justify-content: space-between;
 }
 
@@ -240,15 +237,16 @@ div #logo {
     padding: 10px 20px;
 }
 
- .kimonovideo {
+.videopage.kimono {
    height: auto;
   background-image: url('media/kimonodragonartwork.png');
 background-size: contain;
-display: flex;
-padding-top: 5em;
 background-position: center;
 background-repeat: no-repeat;
-margin: auto;
+}
+
+.videopage.kimono .vidcontainer {
+  scale: 88%;
 }
 
 .vidcontainer {
@@ -259,8 +257,14 @@ justify-content: center;
 align-content: center;
 }
 
-.kimonovideo .vidcontainer {
-  scale: 89%;
+.vidcontainer#bass {
+  margin-bottom: 15px;
+  display: flex;
+flex-wrap: wrap;
+align-content: flex-start;
+justify-content: center;
+height: 90vh;
+top: 100px;
 }
 
 
@@ -295,6 +299,9 @@ align-content: center;
     width: 100%;
   }
 
+  .vidcontainer#bass .responsive:last-child {
+padding-bottom: 80px;
+  }
 
   #kimonodescription {
     padding: 15px;
@@ -302,12 +309,6 @@ align-content: center;
     margin: auto;
     margin-top: .5em;
     margin-bottom: -1em;
-  }
-
-  section.kimonovideo{
-    padding: 0;
-    margin: 0;
-    width: 100vw;
   }
 
 
@@ -483,5 +484,6 @@ article {
   opacity: 1;
   list-style-type: none;
 }
+
 
 
