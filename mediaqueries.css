@@ -4,7 +4,7 @@
     header  {
       height: 100px;
     }
-  
+
     h1.logoelement {
       font-size: 2.3em;
     }
@@ -39,25 +39,24 @@ header {
   height: 90px;
 }
 
-    h1.logoelement {
-      font-size: 2em;
-    }
+h1.logoelement {
+  font-size: 2em;
+}
   
   
-    h2.logoelement{font-size: 7px;
-    }
+h2.logoelement{font-size: 7px;  
+}
   
-    nav ul {
-     font-size: 1.3em;
-   }
+nav ul {
+   font-size: 1.3em;
+}
   
-
-    .responsive {
-      width: 85vw;
-      margin: 1em .5em 2em .5em;
-    }
+.responsive {
+  width: 85vw;
+    margin: 1em .5em 2em .5em;
+}
   
-  .kimonovideo {
+.kimonovideo {
     background-image: none;
     margin: -30px 0 0 0;
     scale: 110%;
@@ -90,6 +89,7 @@ header {
     justify-items: center;
     flex-direction: column;
   }
+
   .panel {
     width: 80vw;
     background-color: black;
@@ -125,7 +125,6 @@ header {
     font-size: .9em;
     padding: 15px;
     transition: opacity .5s ease-in-out;
-  
   } 
   
   .panel.active {
@@ -152,9 +151,11 @@ header {
     z-index: 1;
     height: 70px;
   }
-  
+
   h1.logoelement {
     font-size: 1.85em;
+    margin-left: -3px;
+    margin-bottom: -3px;
   }
   
   nav.active, nav  {
@@ -170,6 +171,7 @@ header {
     width: 100vw;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9) ;
+    
     }
 
     
@@ -178,8 +180,8 @@ header {
   margin-top: -5px;
   /* margin-right: -55px; */
   height: 100vh;
-  width: 100px;
-  transition: width 0s;
+  width: 12vw;
+  transition: position 2s;
 }
 
 .icon {
@@ -212,11 +214,20 @@ header {
     margin-top: -70px; 
   }
   
+  nav.active ul {
+    margin-right: -55px;
+
+  }
 
   nav ul li {
     border-radius: 6px;
     margin-top: 10px;
+    opacity: 0;
     }
+
+  nav.active ul li {
+    opacity: 1;
+  }
 
     nav.active .icon .line1 {
       width: 30px;
@@ -228,6 +239,15 @@ header {
       transform: rotate(135deg) translateX(-3px) translateY(-8px);
     }
 
+    section p:first-child {
+      margin: auto;
+      margin-bottom: 0px;
+    }
+
+    .kimonovideo {
+      margin-top: autoo;
+      padding: 0px;
+    }
 
   .panel ul {
     background-color: rgba(0, 0, 0, 0.8);
