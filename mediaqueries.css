@@ -5,9 +5,9 @@
     height: 100px;
   }
 
-
-  h1.logoelement {
-    font-size: 2.3em;
+  
+  section p:first-child{
+    font-size: .8em;
   }
 
 h2.logoelement {
@@ -39,9 +39,38 @@ section p:first-child{
 header {
 height: 90px;
 }
+  
+.videopage.kimono {
+    background-image: none;
+  }
 
-  h1.logoelement {
-    font-size: 2em;
+  .videopage.kimono .vidcontainer {
+    scale: 100%;
+  }
+
+/* 
+  main #videopage {
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    align-content: space-between;
+    }  */
+  
+  #photos img {
+  width: 90vw;
+  height: auto;
+  }
+  
+  .albums {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
   }
 
 
@@ -252,9 +281,19 @@ nav.active ul li {
     padding: 0px;
   }
 
-.panel ul {
-  background-color: rgba(0, 0, 0, 0.8);
-}
+    nav.active .icon .line1 {
+      width: 30px;
+      transform: rotate(-135deg) translateX(-12px) translateY(-2px);
+    }
+    
+    nav.active .icon .line2 {
+      width: 30px;
+      transform: rotate(135deg) translateX(-3px) translateY(-8px);
+    }
+
+  .panel ul {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
 .panel.active {
   justify-items: center;
