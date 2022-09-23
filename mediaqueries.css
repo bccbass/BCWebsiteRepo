@@ -5,9 +5,8 @@
     height: 100px;
   }
 
-  
-  section p:first-child{
-    font-size: .8em;
+  h1.logoelement {
+    font-size: 2.3em;
   }
 
 h2.logoelement {
@@ -15,16 +14,13 @@ h2.logoelement {
 
 }
 
-.kimonovideo {
+/* .kimonovideo {
   margin: 0;
   height: auto;
-} 
-
+}  */
 
 section p:first-child{
-  margin: 30px 30px -60px 30px ;
   font-size: .8em;
-  padding: 0;
 }
 
  ul {
@@ -39,70 +35,39 @@ section p:first-child{
 header {
 height: 90px;
 }
-  
-.videopage.kimono {
-    background-image: none;
-  }
 
-  .videopage.kimono .vidcontainer {
-    scale: 100%;
-  }
+h1.logoelement {
+font-size: 2em;
+}
+
+
+h2.logoelement{font-size: 7px;  
+}
+
+nav ul {
+ font-size: 1.3em;
+}
+
+.responsive {
+width: 85vw;
+  margin: 1em .5em 2em .5em;
+}
+
+.videopage.kimono {
+  background-image: none;
+}
+
+.videopage.kimono .vidcontainer {
+  scale: 100%;
+}
 
 /* 
-  main #videopage {
-    flex-direction: column;
-    padding: 0;
-    justify-content: center;
-    align-content: space-between;
-    }  */
-  
-  #photos img {
-  width: 90vw;
-  height: auto;
-  }
-  
-  .albums {
-    margin: 0;
-    margin-top: 15px;
-    padding: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    justify-items: center;
-    flex-direction: column;
-  }
-
-
-  h2.logoelement{font-size: 7px;
-  }
-
-  nav ul {
-   font-size: 1.3em;
- }
-
-
-  .responsive {
-    width: 85vw;
-    margin: 1em .5em 2em .5em;
-  }
-
-.kimonovideo {
-  background-image: none;
-  margin: -30px 0 0 0;
-  scale: 110%;
-}
-
-section p:first-child{
-  margin-bottom: -80px;
-}
-
 main #videopage {
   flex-direction: column;
   padding: 0;
   justify-content: center;
   align-content: space-between;
-  }
+  }  */
 
 #photos img {
 width: 90vw;
@@ -120,6 +85,7 @@ height: auto;
   justify-items: center;
   flex-direction: column;
 }
+
 .panel {
   width: 80vw;
   background-color: black;
@@ -155,7 +121,6 @@ height: auto;
   font-size: .9em;
   padding: 15px;
   transition: opacity .5s ease-in-out;
-
 } 
 
 .panel.active {
@@ -182,7 +147,6 @@ header {
   z-index: 1;
   height: 70px;
 }
-
 
 h1.logoelement {
   font-size: 1.85em;
@@ -271,29 +235,9 @@ nav.active ul li {
     transform: rotate(135deg) translateX(-3px) translateY(-8px);
   }
 
-  section p:first-child {
-    margin: auto;
-    margin-bottom: 0px;
-  }
-
-  .kimonovideo {
-    margin-top: autoo;
-    padding: 0px;
-  }
-
-    nav.active .icon .line1 {
-      width: 30px;
-      transform: rotate(-135deg) translateX(-12px) translateY(-2px);
-    }
-    
-    nav.active .icon .line2 {
-      width: 30px;
-      transform: rotate(135deg) translateX(-3px) translateY(-8px);
-    }
-
-  .panel ul {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+.panel ul {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 .panel.active {
   justify-items: center;
