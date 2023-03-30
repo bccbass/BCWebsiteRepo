@@ -32,12 +32,22 @@ for (let video of videos) {
     video.setAttribute('role', 'button');
 
     // Add a thumbnail insert after img to predetermine size:  width="560" height="315" 
-
+    //I don't like that i've had to hardcode filetype (jpg) to the video string
     video.innerHTML =
-        `<img  alt="" src="https://img.youtube.com/vi/${id}/maxresdefault.jpg"><br>
-     ${video.textContent}`;
-}
+        `<img  alt="" src="media/youtubeThumbnails/${id}.webp" class="youtubeThumbnail">
+     ${video.textContent}`}
 
+    
+     
+     
+
+const resetThumbnails = (event) => {
+    for (let video of videos) {
+        video.innerHTML =
+        `<img  alt="" src="media/youtubeThumbnails/${id}.webp" class="youtubeThumbnail">
+     ${video.textContent}`}
+     event.preventDefault()
+    }
 
 
 
@@ -45,6 +55,7 @@ document.addEventListener('click', clickHandler);
 
 
 function clickHandler(event) {
+    
     //gets vid link
     let link = event.target.closest('[data-youtube]');
     if (!link) return;
@@ -68,6 +79,4 @@ const nav = document.getElementById('mobilenav')
 
 toggle.addEventListener('click', () => nav.classList.toggle('active')
 )
-
-
 

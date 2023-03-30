@@ -1,25 +1,28 @@
-
- /* Check BASS HJTML For weird nav wrappers */ 
- nav {
-  width:  120px;
+/* Check BASS HTML For weird nav wrappers */
+nav {
+  width: 120px;
   height: 560px;
-  display: flex ;
+  display: flex;
   align-items: center;
   border-radius: 7px;
   justify-content: flex-end;
-  position: sticky; 
+  position: sticky;
   top: 0;
   margin: 15px 0;
   overflow: hidden;
 }
 
-nav.active { 
+nav.active {
   z-index: 1;
-  width:  300px;
+  width: 300px;
   height: 570px;
-}  
+}
 
- nav ul {
+.activeNavLink {
+  border-bottom: 1px solid;
+}
+
+nav ul {
   display: flex;
   cursor: pointer;
   text-align: end;
@@ -33,11 +36,11 @@ nav.active {
   opacity: 0;
   justify-content: space-around;
   align-items: flex-end;
-  transition: opacity .5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
-nav.active ul{  
-opacity: 1;
+nav.active ul {
+  opacity: 1;
 }
 
 nav ul li {
@@ -48,7 +51,7 @@ nav ul li {
   line-height: 2.1em;
   width: min-content;
   white-space: nowrap;
-  transition: background-color .3s ease-in-out, transform .3s ease-out;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-out;
 }
 
 nav ul a {
@@ -59,9 +62,9 @@ nav ul a {
   line-height: 1.3em;
   font-size: 1.2em;
   width: 100%;
-  transition: color .3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
- 
+
 nav ul li:nth-child(1) {
   transform: translateX(280px);
 }
@@ -73,9 +76,11 @@ nav ul li:nth-child(2) {
 nav ul li:nth-child(3) {
   transform: translateX(400px);
 }
+
 nav ul li:nth-child(4) {
   transform: translateX(450px);
 }
+
 nav ul li:nth-child(5) {
   transform: translateX(550px);
 }
@@ -88,7 +93,7 @@ nav.active ul li {
 /* HoverState */
 
 nav.active ul li:hover {
-background-color: rgb(249, 3, 3);
+  background-color: rgb(249, 3, 3);
   transform: translateY(-1px);
 }
 
@@ -111,7 +116,7 @@ background-color: rgb(249, 3, 3);
   right: 60px;
 }
 
-icon.focus{
+icon.focus {
   outline: 0;
 }
 
@@ -123,18 +128,18 @@ icon.focus{
   top: 8px;
   left: 3px;
   border-radius: 2px;
-  transition: transform .2s linear;
+  transition: transform 0.2s linear;
 }
 
 .icon .line2 {
-top: auto;  
-bottom: 20px;
+  top: auto;
+  bottom: 20px;
 }
 
 .icon .line3 {
   top: auto;
   bottom: 10px;
-} 
+}
 
 nav.active .icon {
   margin: -6px -10px;
@@ -155,20 +160,23 @@ nav.active .icon .line3 {
   opacity: 0;
 }
 
-nav.active ul li a:hover{
+nav.active ul li a:hover {
   color: white;
 }
-
-
 
 /* --------------- */
 
 body {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 200;
   margin: 0;
   padding: 0;
   height: 100vh;
+}
+
+.indexheader {
+  top: 0;
+  /* keep this set? */
 }
 
 .background-video {
@@ -178,20 +186,20 @@ body {
   z-index: -1;
 }
 
- #background-video{
-   position: fixed;
-   margin: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    top: 0;
-    bottom: 125px;
-  }
+#background-video {
+  position: fixed;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 0;
+  bottom: 125px;
+}
 
- header {
+header {
   background-color: rgba(255, 255, 255, 0.9);
   margin: 0;
   height: 125px;
@@ -201,20 +209,22 @@ body {
 }
 
 #logo {
-padding: .7em 1em;}
-h1.logoelement {letter-spacing: -4px;
-    color: rgba(62, 62, 62, 0.673);
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 300;
-    font-size: 50px;
-    text-transform: uppercase;
-    size: 50%;
-    display: flex;
-align-items: flex-start;    
-padding: 0;
-margin: 0;
-white-space: nowrap;
+  padding: 0.7em 1em;
+}
 
+h1.logoelement {
+  letter-spacing: -4px;
+  color: rgba(62, 62, 62, 0.673);
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  font-size: 50px;
+  text-transform: uppercase;
+  size: 50%;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
 }
 
 h2.logoelement {
@@ -222,27 +232,27 @@ h2.logoelement {
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 4px;
-   font-weight: 200;
-   font-size: 1em;
+  font-weight: 200;
+  font-size: 1em;
   margin: 0;
-  color:rgba(85, 85, 85, 0.701);
+  color: rgba(23, 23, 23, 0.727);
 }
 
-.logoelement a{
+.logoelement a {
   text-decoration: none;
-  color:rgba(85, 85, 85, 0.701)
+  color: rgba(85, 85, 85, 0.701);
 }
 
 div #logo {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 .videopage.kimono {
-   height: auto;
-  background-image: url('media/kimonodragonartwork.png');
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
+  height: auto;
+  background-image: url("media/kimononotext.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .videopage.kimono .vidcontainer {
@@ -252,65 +262,62 @@ background-repeat: no-repeat;
 .vidcontainer {
   margin-bottom: 15px;
   display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 .vidcontainer#bass {
   margin-bottom: 15px;
   display: flex;
-flex-wrap: wrap;
-align-content: flex-start;
-justify-content: center;
-height: 90vh;
-top: 100px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  height: 90vh;
+  top: 100px;
 }
 
-
-  /* responsive video */
+/* responsive video */
 .responsive {
   /* border: 5px dotted green; */
   width: 40vw;
   margin: 35px;
 }
 
-  .iframe-container{
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; 
-  }
+.iframe-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
 
-  .iframe-container iframe{
-    border-radius: 15px;
-    margin: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
+.iframe-container iframe {
+  border-radius: 15px;
+  margin: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 
+.iframe-container img {
+  margin: 0px 0 0 -16px;
+  position: absolute;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+}
 
- .iframe-container img {
-    margin: 0px 0 0 -16px;
-    position: absolute;
-    border-radius: 15px;
-    height: 100%;
-    width: 100%;
-  }
+.vidcontainer#bass .responsive:last-child {
+  padding-bottom: 80px;
+}
 
-  .vidcontainer#bass .responsive:last-child {
-padding-bottom: 80px;
-  }
-
-  #kimonodescription {
-    padding: 15px;
-    width: 90vw;
-    margin: auto;
-    margin-top: .5em;
-    margin-bottom: -1em;
-  }
-
+#kimonodescription {
+  padding: 15px;
+  width: 90vw;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: -1em;
+}
 
 article {
   align-content: center;
@@ -320,7 +327,7 @@ article {
 
 #albuminfo {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   flex-wrap: wrap;
   font-size: 1.2em;
   line-height: 1.8em;
@@ -328,18 +335,17 @@ article {
   width: 100vw;
 }
 
-#albuminfo  ol{
+#albuminfo ol {
   line-height: 3em;
   color: white;
   background-color: rgba(254, 0, 0, 0.8);
   width: auto;
   padding: 35px 20px 35px 70px;
-  border-top:  2px solid rgba(145, 24, 24, 0.598);
+  border-top: 2px solid rgba(145, 24, 24, 0.598);
   border-bottom: 2px solid rgba(255, 58, 58, 0.52);
   margin: 0;
 }
 
- 
 #albuminfo ul {
   color: white;
   background-color: #e95c43ec;
@@ -349,83 +355,77 @@ article {
   margin: 0;
 }
 
-
-
 #photos {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: auto;
 }
 
-
-
 #photos img {
   padding-bottom: 40px;
-   height: 385px;
-   width: auto;
-   object-fit: contain ;
- transition: opacity 3s;
+  height: 385px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 3s;
+}
 
- }
- 
- #photos .img {
+#photos .img {
   margin: 15px 30px;
   padding-bottom: 15px;
 }
 
-
- #photos ul  {
-   color: rgb(255, 255, 255);  
-   list-style-type: none;
-   background-color: rgba(0, 0, 0, 0.486);
-   width: 45%;
-   position: relative;
-   border-radius: 0 35px 35px 0 ;
-   opacity: 0;
-   font-size: 1.2em;
-   padding: 15px;
-   margin-top: -9em;
-   transition: opacity .5s ease-in-out;
-   font-size: 1em;
- }
-
- #photos ul:hover {
-   opacity: 1;
- }
-
-
- main{
-  animation: fadeInAnimation ease 1.5s; 
-
-  animation-iteration-count: 1; 
- 
-  animation-fill-mode: forwards; 
-
+#photos ul {
+  color: rgb(255, 255, 255);
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.486);
+  width: 45%;
+  position: relative;
+  border-radius: 0 35px 35px 0;
+  opacity: 0;
+  font-size: 1.2em;
+  padding: 15px;
+  margin-top: -9em;
+  transition: opacity 0.5s ease-in-out;
+  font-size: 1em;
 }
 
-.vidcontainer {
-  animation: fadeInAnimation ease 3s; 
-
-  animation-iteration-count: 1; 
- 
-  animation-fill-mode: forwards; 
-
+#photos ul:hover {
+  opacity: 1;
 }
 
+.contentFadeIn {
+  animation: fadeInAnimation ease 1.2s;
 
-@keyframes fadeInAnimation { 
-  0% { 
-      opacity: .05; 
-  } 
-  100% { 
-      opacity: 1; 
-   } 
-} 
+  animation-iteration-count: 1;
 
+  animation-fill-mode: forwards;
+}
+.longContentFadeIn {
+  animation: fadeInAnimation ease 4s;
 
+  animation-iteration-count: 1;
 
-.vidcontainer a, iframe, #videopage a{
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0.05;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.youtubeThumbnail {
+  object-fit: cover;
+}
+
+.vidcontainer a,
+iframe,
+#videopage a {
   margin: 25px 15px;
 }
 
@@ -435,6 +435,7 @@ article {
   display: flex;
   width: 90vw;
 }
+
 .panel {
   border: 1px solid rgba(63, 63, 63, 0.2);
   background-size: cover;
@@ -447,30 +448,27 @@ article {
   flex: 0.2;
   margin: 5px;
   position: relative;
-  opacity: .4;
-  transition: flex .4s ease-in, opacity .6s ease-in;;
+  opacity: 0.4;
+  transition: flex 0.4s ease-in, opacity 0.6s ease-in;
 }
-
 
 .albums li {
   margin-bottom: 10px;
 }
 
-
 .albums ul {
-  color: rgb(255, 255, 255);  
+  color: rgb(255, 255, 255);
   list-style-type: none;
   background-color: rgba(0, 0, 0, 0.486);
   width: 72%;
   position: absolute;
-  border-radius: 0 35px 35px 0 ;
+  border-radius: 0 35px 35px 0;
   bottom: 55px;
   opacity: 0;
   font-size: 1.2em;
   padding: 15px;
-  transition: opacity .5s ease-in-out;
-
-} 
+  transition: opacity 0.5s ease-in-out;
+}
 
 .panel.active {
   width: 60vw;
@@ -479,11 +477,7 @@ article {
   opacity: 1;
 }
 
-
 .panel.active ul:hover {
   opacity: 1;
   list-style-type: none;
 }
-
-
-
