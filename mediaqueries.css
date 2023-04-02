@@ -67,9 +67,10 @@ main #videopage {
   align-content: space-between;
   }  */
 
-  #photos img {
+  #photos img, .photo {
     width: 90vw;
     height: auto;
+    margin: .1rem 0;
   }
 
   .albums {

@@ -11,11 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Source+Code+Pro:ital,wght@0,200;0,400;0,500;1,200;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script defer src="app.js"></script>
   </head>
 
-  <body>
+  <body class="videoBackground">
     <header class="indexheader">
       <div id="logo">
         <h1 class="logoelement">Benjamin Campbell</h1>
@@ -38,14 +39,13 @@
         </button>
       </nav>
     </header>
-    <div class="background-video longContentFadeIn">
-      <video id="background-video"  autoplay loop muted playsinline poster="">
+    <main class="background-video longContentFadeIn">
+      <video id="background-video" autoplay loop muted playsinline poster="">
         <source src="media/welcome_river.mp4" type="video/mp4" />
       </video>
-    </div>
-
-    <main class="index" style="height: 100vh"></main>
-
-    <script src="script.js"></script>
+    </main>
+    <footer class="footer">
+      <p>designed and coded by Benjamin Campbell &copy 2023</p>
+    </footer>
   </body>
 </html>

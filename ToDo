@@ -2,10 +2,21 @@ remove .html
 yt thumbs
 
 
-re-thumbnail video when you click a different one - javascript - explore, but maybe ask az or logz
+refactor html and css
 
+check use of pixels and change to dynamic properties re em and rem for resizing functionality
 
-Done?
+load picuture/vid animation indivually so they fade in at different rates
+
+add semantic tags
+
+reload thumbnail on video on click away
+
+retool kimono webpage so it just shows blurb (dissapear?) and 
+drop down buttons to reveal:
+    - streaming platforms
+    - album info
+    - video page
 
 active nav further from border
 kimono text spacing jesus christ

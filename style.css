@@ -1,4 +1,10 @@
 /* Check BASS HTML For weird nav wrappers */
+/* .navbar {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+} */
+
 nav {
   width: 120px;
   height: 560px;
@@ -14,8 +20,8 @@ nav {
 
 nav.active {
   z-index: 1;
-  width: 300px;
-  height: 570px;
+  width: 360px;
+  height: 580px;
 }
 
 .activeNavLink {
@@ -29,7 +35,7 @@ nav ul {
   font-size: 1.3em;
   list-style-type: none;
   flex-direction: column;
-  width: 300px;
+  width: 00px;
   height: 85%;
   padding-top: 4em;
   padding-right: 3em;
@@ -45,9 +51,10 @@ nav.active ul {
 
 nav ul li {
   margin-top: 45px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.317);
-  background-color: rgba(254, 0, 0, 0.9);
-  border-radius: 12px;
+  padding: 0.3rem 2rem;
+  box-shadow: 1px 1px 1px rgba(58, 58, 58, 0.317);
+  background-color: rgba(223, 115, 115, 0.981);
+  border-radius: 0.4rem;
   line-height: 2.1em;
   width: min-content;
   white-space: nowrap;
@@ -70,18 +77,26 @@ nav ul li:nth-child(1) {
 }
 
 nav ul li:nth-child(2) {
+  background-color: rgba(161, 94, 205, 0.981);
+
   transform: translateX(540px);
 }
 
 nav ul li:nth-child(3) {
+  background-color: rgba(116, 164, 112, 0.981);
+
   transform: translateX(400px);
 }
 
 nav ul li:nth-child(4) {
+  background-color: rgba(83, 100, 210, 0.981);
+
   transform: translateX(450px);
 }
 
 nav ul li:nth-child(5) {
+  background-color: rgba(255, 170, 51, 0.981);
+
   transform: translateX(550px);
 }
 
@@ -93,7 +108,7 @@ nav.active ul li {
 /* HoverState */
 
 nav.active ul li:hover {
-  background-color: rgb(249, 3, 3);
+  background-color: rgb(194, 50, 50);
   transform: translateY(-1px);
 }
 
@@ -165,6 +180,25 @@ nav.active ul li a:hover {
 }
 
 /* --------------- */
+/* fix up footer for kimono dragon page and bass page
+ */
+.footer {
+  color: rgb(116, 116, 116);
+  font-weight: lighter;
+  text-align: center;
+  margin-top: 4rem;
+  /* padding-bottom: 1px; */
+  /* background-color: rgba(255, 255, 255, 0.255); */
+  z-index: 250;
+  position: static;
+  width: 100vw;
+  bottom: 0;
+}
+
+
+.videoBackground .footer {
+  position: absolute;
+}
 
 body {
   font-family: "Source Code Pro", monospace;
@@ -176,7 +210,13 @@ body {
 
 .indexheader {
   top: 0;
+  position: fixed;
+  width: 100vw;
   /* keep this set? */
+}
+
+.index-background {
+  height: 100vh;
 }
 
 .background-video {
@@ -355,27 +395,16 @@ article {
   margin: 0;
 }
 
-#photos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: auto;
-}
 
-#photos img {
-  padding-bottom: 40px;
-  height: 385px;
-  width: auto;
-  object-fit: contain;
-  transition: opacity 3s;
-}
 
-#photos .img {
-  margin: 15px 30px;
-  padding-bottom: 15px;
-}
+/* removed 3.31.23 - not sure what this is controlling */
 
-#photos ul {
+/* there use to be captions on hover (done in a ul for some reason)
+create new captions using alt text
+redo with sematinc tag caption and create :hover clase for this and album info
+
+*/
+/* #photos ul {
   color: rgb(255, 255, 255);
   list-style-type: none;
   background-color: rgba(0, 0, 0, 0.486);
@@ -388,11 +417,11 @@ article {
   margin-top: -9em;
   transition: opacity 0.5s ease-in-out;
   font-size: 1em;
-}
+} */
 
-#photos ul:hover {
+/* #photos ul:hover {
   opacity: 1;
-}
+} */
 
 .contentFadeIn {
   animation: fadeInAnimation ease 1.2s;
@@ -456,19 +485,10 @@ iframe,
   margin-bottom: 10px;
 }
 
-.albums ul {
-  color: rgb(255, 255, 255);
-  list-style-type: none;
-  background-color: rgba(0, 0, 0, 0.486);
-  width: 72%;
+.albums ul{
   position: absolute;
-  border-radius: 0 35px 35px 0;
-  bottom: 55px;
-  opacity: 0;
-  font-size: 1.2em;
-  padding: 15px;
-  transition: opacity 0.5s ease-in-out;
 }
+
 
 .panel.active {
   width: 60vw;
@@ -480,4 +500,51 @@ iframe,
 .panel.active ul:hover {
   opacity: 1;
   list-style-type: none;
+}
+
+
+ .caption {
+  cursor: default;
+  color: rgb(255, 255, 255); 
+  list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.486);
+  width: 72%;
+  border-radius: 0 35px 35px 0;
+  bottom: 55px;
+  opacity: 0;
+  font-size: 1.2em;
+  padding: 15px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.photo{
+  margin: 2rem;
+  padding: 0;
+  height: 385px;
+  width:fit-content;
+  }
+
+
+.photo-caption {
+position: relative;
+  bottom: 30%;
+}
+#photos .caption:hover {
+  opacity: 1;
+}
+
+
+
+#photos img {
+  padding: 0;
+  height: 385px;
+  width: auto;
+  border-radius: 0.6rem;
 }

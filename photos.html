@@ -12,8 +12,9 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script defer src="app.js"></script>
   </head>
 
   <body>
@@ -41,46 +42,53 @@
         </button>
       </nav>
     </header>
-    <main>
-      <div id="photos" class="contentFadeIn">
-        <div class="img">
-          <img
-            src="media/Web Photo/bluemountainportrait.webp"
-            alt="Self Portrait - Blue Mountains, NSW"
-          />
-        </div>
-        <div class="img">
-          <img
-            src="media/Web Photo/BenAndGunnar.webp"
-            alt="with Gunnar Olson and Big Data"
-          />
-        </div>
-        <div class="img">
-          <img
-            src="media/Web Photo/midnightmagic.webp"
-            alt="Midnight Magic in Miami supporting Washed Out, Cut/Copy"
-          />
-        </div>
-        <div class="img">
-          <img
-            src="media/Web Photo/chris-bear-trio.webp"
-            alt="Assembly: Chris Bear and Aaron Arntz"
-          />
-        </div>
-        <div class="img">
-          <img
-            src="media/Web Photo/BenAndAngelica.webp"
-            alt="With Angelica Allen/My Midnight Heart"
-          />
-        </div>
-        <div class="img">
-          <img
-            src="media/Web Photo/uprightbass.webp"
-            alt="Tracking Upright Bass with Build"
-          />
-        </div>
+    <main id="photos" class="contentFadeIn">
+      <div class="photo">
+        <img
+          src="media/webPhoto/bluemountainportrait.webp"
+          alt="Blue Mountains, NSW"
+        />
+        <div class="caption photo-caption"> Blue Mountains, NSW</em></div>
+      </div>
+      <div class="photo">
+        <img
+          src="media/webPhoto/BenAndGunnar.webp"
+          alt="with Gunnar Olson and Big Data"
+        />
+        <div class="caption photo-caption"><em> with Gunnar Olson and Big Data</em></div>
+      </div>
+
+      <div class="photo">
+        <img
+          src="media/webPhoto/midnightmagic.webp"
+          alt="Midnight Magic in Miami supporting Washed Out, Cut/Copy"
+        />
+        <div class="caption photo-caption"><em> Midnight Magic supporting Washed Out, Cut/Copy. Miami, FL</em></div>
+      </div>
+      <div class="photo">
+        <img
+          src="media/webPhoto/chris-bear-trio.webp"
+          alt="Assembly: Chris Bear and Aaron Arntz"
+        />
+        <div class="caption photo-caption"><em> Assembly: Chris Bear and Aaron Arntz</em></div>
+      </div>
+      <div class="photo">
+        <img
+          src="media/webPhoto/BenAndAngelica.webp"
+          alt="With Angelica Allen/My Midnight Heart"
+        />
+        <div class="caption photo-caption"><em> With Angelica Allen/My Midnight Heart</em></div>
+      </div>
+      <div class="photo">
+        <img
+          src="media/webPhoto/uprightbass.webp"
+          alt="Tracking Upright Bass with Build"
+        />
+        <div class="caption photo-caption"><em>Recording session: Build. Brooklyn, NY</em></div>
       </div>
     </main>
-    <script src="script.js"></script>
+    <footer class="footer">
+      <p>designed and coded by Benjamin Campbell &copy 2023</p>
+    </footer>
   </body>
 </html>
