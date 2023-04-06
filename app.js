@@ -80,3 +80,43 @@ const nav = document.getElementById('mobilenav')
 toggle.addEventListener('click', () => nav.classList.toggle('active')
 )
 
+
+const kimonoSections = document.querySelectorAll('.kimonoSection')
+
+const kimonoInfoButton = document.querySelector('#kimonoInfoButton')
+const kimonoVideoButton = document.querySelector('#kimonoVideoButton')
+const kimonoAlbumInfoButton = document.querySelector('#kimonoAlbumInfoButton')
+const kimonoStreamAlbumButton = document.querySelector('#kimonoStreamButton')
+const kimonoArtworkButton = document.querySelector('#kimonoArtworkButton')
+
+const hideAllSections = (e) => {
+    for (let section of kimonoSections) {
+section.classList.add('hide')
+    }}
+const showVideo = () => {
+    hideAllSections()
+return kimonoSections[1].classList.remove('hide')
+    }
+const showAlbumInfo = () => {
+    hideAllSections()
+return kimonoSections[2].classList.remove('hide')
+    }
+const showStreamAlbum = () => {
+    hideAllSections()
+return kimonoSections[3].classList.remove('hide')
+    }
+const showArtwork = () => {
+    hideAllSections()
+return kimonoSections[0].classList.remove('hide')
+    }
+
+
+
+
+
+// kimonoInfoButton.addEventListener('click', hideAllSections)
+kimonoVideoButton.addEventListener('click', showVideo)
+kimonoAlbumInfoButton.addEventListener('click', showAlbumInfo)
+kimonoStreamAlbumButton.addEventListener('click', showStreamAlbum)
+kimonoArtworkButton.addEventListener('click', showArtwork)
+

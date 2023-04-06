@@ -42,7 +42,7 @@
         </button>
       </nav>
     </header>
-    <main>
+    <main id="kimono-main">
       <section id="kimonodescription">
         <p>
           Kimono Dragon is a suite of songs utilizing live instruments, hardware
@@ -51,55 +51,66 @@
           electronic music, minimalism and free jazz.
         </p>
       </section>
-      <div>
-        <!-- <div id="kimonobackground"> -->
-        <section class="videopage kimono">
-          <div class="vidcontainer contentFadeIn">
-            <div class="responsive">
-              <div class="iframe-container">
-                <a
-                  data-youtube
-                  href="https://www.youtube.com/watch?v=XKutkxX4ib4&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE"
-                ></a>
-              </div>
-            </div>
-            <div class="responsive">
-              <div class="iframe-container">
-                <a
-                  data-youtube
-                  href="https://www.youtube.com/watch?v=9kob0A7EiPY&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE&index=2"
-                ></a>
-              </div>
-            </div>
-            <div class="responsive">
-              <div class="iframe-container">
-                <a
-                  data-youtube
-                  href="https://www.youtube.com/watch?v=ClUxKUf09iU&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE&index=3"
-                ></a>
-              </div>
-            </div>
-            <div class="responsive">
-              <div class="iframe-container">
-                <a
-                  data-youtube
-                  href="https://www.youtube.com/watch?v=iyLqyEFC6gU&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE&index=4"
-                ></a>
-              </div>
-            </div>
-            <div class="responsive">
-              <div class="iframe-container">
-                <a
-                  data-youtube
-                  href="https://www.youtube.com/watch?v=TgmcOqw6VJs&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE&index=5"
-                ></a>
-              </div>
+
+      <ul id="kimono-nav">
+        <li class="kimonoButton" id="kimonoAlbumInfoButton">Info</li>
+        <li class="kimonoButton" id="kimonoVideoButton">Video</li>
+        <li class="kimonoButton" id="kimonoStreamButton">Stream</li>
+        <li class="kimonoButton" id="kimonoArtworkButton">Artwork</li>
+      </ul>
+
+      <section class="kimonoSection contentFadeIn" id="kimonoAlbumCover">
+        <div id="kimonoArtwork">
+        <img src="media/Kimono Dragon cover v.2.webp" alt="Kimono Dragon Album Cover" />
+      </div>
+      </section>
+
+      <section class="kimonoSection contentFadeIn hide">
+        <div id="kimonoVideos">
+          <div class="responsive">
+            <div class="iframe-container">
+              <a
+                data-youtube
+                href="https://www.youtube.com/watch?v=XKutkxX4ib4&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE"
+              ></a>
             </div>
           </div>
-        </section>
-      </div>
+          <div class="responsive">
+            <div class="iframe-container">
+              <a
+                data-youtube
+                href="https://www.youtube.com/watch?v=9kob0A7EiPY&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE&index=2"
+              ></a>
+            </div>
+          </div>
+          <div class="responsive">
+            <div class="iframe-container">
+              <a
+                data-youtube
+                href="https://www.youtube.com/watch?v=ClUxKUf09iU&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE&index=3"
+              ></a>
+            </div>
+          </div>
+          <div class="responsive">
+            <div class="iframe-container">
+              <a
+                data-youtube
+                href="https://www.youtube.com/watch?v=iyLqyEFC6gU&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE&index=4"
+              ></a>
+            </div>
+          </div>
+          <div class="responsive">
+            <div class="iframe-container">
+              <a
+                data-youtube
+                href="https://www.youtube.com/watch?v=TgmcOqw6VJs&list=PLfCGiFgMHdH4ZtX57FsHOBibXHOS_AHlE&index=5"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <section id="albuminfo">
+      <section id="kimonoAlbumInfo" class="contentFadeIn kimonoSection hide">
         <article>
           <ol>
             <li>Sargasso to Hudson</li>
@@ -131,9 +142,17 @@
           </ul>
         </article>
       </section>
+
+      <section id="kimonoStreamAlbum" class="contentFadeIn kimonoSection hide">
+          <div class="stream-links">
+          <a href=""><img src="media/streaming-logos/applemusic.png" alt=""></a>
+          <a href=""><img src="media/streaming-logos/spotify.png" alt=""></a>
+          <a href=""><img src="media/streaming-logos/BandCamp_Logo.png" alt=""></a>
+        </div>
+        </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <p>designed and coded by Benjamin Campbell &copy 2023</p>
-    </footer> -->
+    </footer>
   </body>
 </html>

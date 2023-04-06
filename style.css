@@ -186,15 +186,14 @@ nav.active ul li a:hover {
   color: rgb(116, 116, 116);
   font-weight: lighter;
   text-align: center;
-  margin-top: 4rem;
-  /* padding-bottom: 1px; */
-  /* background-color: rgba(255, 255, 255, 0.255); */
+  margin-top: 2rem;
+  padding-bottom: .5rem 0;
   z-index: 250;
-  position: static;
+  position: relative;
+  height: 30px;
   width: 100vw;
   bottom: 0;
 }
-
 
 .videoBackground .footer {
   position: absolute;
@@ -287,39 +286,61 @@ div #logo {
   padding: 10px 20px;
 }
 
-.videopage.kimono {
+/* #kimonoVideos {
   height: auto;
-  background-image: url("media/kimononotext.webp");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+} */
+
+/* #kimonoVideos .vidcontainer {
+  scale: 88%;
+} */
+
+
+.kimonoButton {
+  position: relative;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  height: 3rem;
+  z-index: 200;
+  padding: 0.3rem 2rem;
+  box-shadow: 1px 1px 1px rgba(58, 58, 58, 0.317);
+  background-color: rgba(223, 115, 115, 0.981);
+  border-radius: 0.4rem;
+  line-height: 2.4em;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-out;
 }
 
-.videopage.kimono .vidcontainer {
-  scale: 88%;
+.stream-links {
+height: 60vh;
+display: flex;
+/* align-items: center; */
 }
+
+.stream-links a img {
+
+  width: 15vw;
+  margin: 7rem 2rem 2rem;
+  border-radius: 50%;
+}
+
 
 .vidcontainer {
-  margin-bottom: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-}
-
-.vidcontainer#bass {
-  margin-bottom: 15px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: center;
-  height: 90vh;
+  /* height: 90vh; */
   top: 100px;
 }
 
 /* responsive video */
 .responsive {
-  /* border: 5px dotted green; */
   width: 40vw;
   margin: 35px;
 }
@@ -353,10 +374,12 @@ div #logo {
 
 #kimonodescription {
   padding: 15px;
-  width: 90vw;
+  width: 70vw;
   margin: auto;
   margin-top: 0.5em;
   margin-bottom: -1em;
+  text-align: center;
+  z-index: 100;
 }
 
 article {
@@ -365,17 +388,51 @@ article {
   margin: 0;
 }
 
-#albuminfo {
-  display: flex;
+#kimono-main {
+display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+
+.kimonoSection {
+  /* position: absolute; */
+  /* top: 20rem; */
+}
+
+.hide {
+  display: none;
+  transition: 3s ease-out;
+}
+/* when included in hideSection Function it screws up placement - I think messing with display property?  */
+#kimonoAlbumCover img {
+  width: 80vw;
+  /* display: block; */
+  margin-top: -100px;
+
+  z-index: -5;
+  margin-bottom: 3rem;
+  /* position: relative; */
+}
+
+#kimonoVideos {
+  margin-bottom: 15px;
+  display: flex;
   flex-wrap: wrap;
-  font-size: 1.2em;
+  justify-content: center;
+  align-content: center;
+}
+
+#kimonoAlbumInfo {
+  background: url('media/albumCovers/kimono.jpg') center;
+  background-size: cover;
+  font-size: 1.2em; */
   line-height: 1.8em;
   margin: auto;
   width: 100vw;
 }
 
-#albuminfo ol {
+#kimonoAlbumInfo ol {
   line-height: 3em;
   color: white;
   background-color: rgba(254, 0, 0, 0.8);
@@ -386,7 +443,7 @@ article {
   margin: 0;
 }
 
-#albuminfo ul {
+#kimonoAlbumInfo ul {
   color: white;
   background-color: #e95c43ec;
   padding: 35px 35px 90px 20px;
@@ -394,8 +451,6 @@ article {
   width: auto;
   margin: 0;
 }
-
-
 
 /* removed 3.31.23 - not sure what this is controlling */
 
@@ -423,6 +478,15 @@ redo with sematinc tag caption and create :hover clase for this and album info
   opacity: 1;
 } */
 
+
+/* want to make fadeout work - currently */
+.contentFadeOut {
+  animation: fadeOutAnimation ease 1.2s;
+
+  /* animation-iteration-count: 1; */
+
+  /* animation-fill-mode: forwards; */
+}
 .contentFadeIn {
   animation: fadeInAnimation ease 1.2s;
 
@@ -445,6 +509,15 @@ redo with sematinc tag caption and create :hover clase for this and album info
 
   100% {
     opacity: 1;
+  }
+}
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
@@ -485,10 +558,9 @@ iframe,
   margin-bottom: 10px;
 }
 
-.albums ul{
+.albums ul {
   position: absolute;
 }
-
 
 .panel.active {
   width: 60vw;
@@ -502,10 +574,9 @@ iframe,
   list-style-type: none;
 }
 
-
- .caption {
+.caption {
   cursor: default;
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255);
   list-style-type: none;
   background-color: rgba(0, 0, 0, 0.486);
   width: 72%;
@@ -524,23 +595,20 @@ iframe,
   margin: auto;
 }
 
-.photo{
+.photo {
   margin: 2rem;
   padding: 0;
   height: 385px;
-  width:fit-content;
-  }
-
+  width: fit-content;
+}
 
 .photo-caption {
-position: relative;
+  position: relative;
   bottom: 30%;
 }
 #photos .caption:hover {
   opacity: 1;
 }
-
-
 
 #photos img {
   padding: 0;
